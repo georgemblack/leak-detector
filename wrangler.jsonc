@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "super-secret-resource",
+  "main": "src/index.ts",
+  "account_id": "bc4564dd499c0a9b8a7bb79c9bd5ea6d",
+  "compatibility_date": "2026-11-11",
+  "workers_dev": true,
+  "preview_urls": false,
+  "vars": {
+    "ALLOW_UNPROTECTED": "false",
+    "ACCESS_AUD": ""
+  },
+  "durable_objects": {
+    "bindings": [{ "name": "REQUEST_LOG", "class_name": "RequestLog" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RequestLog"] }]
+}
